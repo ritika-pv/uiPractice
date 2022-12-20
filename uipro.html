@@ -12,33 +12,85 @@
 
 </head>
 <body>
-    <div class="flex-container" style="background-color: aliceblue;">
-            <div class=" centerHeader">
-            asdfghj
+    <div class="flex-container">
+        <img id="menuBtn" src="menu.png">
+            <div class="centerHeader" style="width: 90%;" >
+                <div class="center">
+                    Adfg
+                </div>
             </div>
-            <div class="flex-container-right">
-                <div style="height: 50px;width: 50px;">1</div>
-                <div style="height: 50px;width: 50px;">2</div>
-                <div style="height: 50px;width: 50px;">3</div>
+            <div class="flex-container-right" style="width: 10%;">
+                <div>1</div>
+                <div>2</div>
+                <div>3</div>
             </div>
     </div>
 
-    <div class="container">
-            <div class="sidenav">
+    <div class="container" >
+            <div id="sidenav">
                 <ul>
-                <li><a href="https://dribbble.com/goods/1350441-Loggie-Logistic-Website-Homepage?token=gAAAAABjnKuAHiYfgl5a6Oo799cSwE0dyJbkDtzA6sqWuwHCN9GleZkong3Jw_FyOeA4FJyUqLgm7kXACiRffqCN0fPbel6dhW70ZsUxWjPswyxZn-KiJfBeqaVcjxI2-qXFGwnjsk-2n4SRQwkz2EV2JO_65ptA1rA46vKXRdUrveWxdAXjYkk%3D">Home</a></li>
-                <li><a href="news.asp">News</a></li>
-                <li><a href="contact.asp">Contact</a></li>
-                <li><a href="about.asp">About</a></li>
+                <li>
+                    <a href="https://dribbble.com/goods/1350441-Loggie-Logistic-Website-Homepage?token=gAAAAABjnKuAHiYfgl5a6Oo799cSwE0dyJbkDtzA6sqWuwHCN9GleZkong3Jw_FyOeA4FJyUqLgm7kXACiRffqCN0fPbel6dhW70ZsUxWjPswyxZn-KiJfBeqaVcjxI2-qXFGwnjsk-2n4SRQwkz2EV2JO_65ptA1rA46vKXRdUrveWxdAXjYkk%3D">Home</a>
+                </li>
+                <li>
+                    <a href="news.asp">News</a>
+                </li>
+                <li>
+                    <a href="contact.asp">Contact</a>
+                </li>
+                <li>
+                    <a href="about.asp">About</a>
+                </li>
             </ul>
             </div>
             
             <div class="mainBody">
                 <div class="heading"> OUR SERVICES </div>
+                <div class="subHeading">Hello ,We are here to help you render
+                     your pdf ,save them,<br>make notes highlight text etc </div>
+                  
+                    
+                <div class="upload-pdf-row">
+                            <div class="upload-pdf-col">
+                                <img class="cardmenu" src="menu.png">
+                               <h3>This will be the heading `C:\Users\dell\Desktop\uipro\uipro.css</h3>
+                               <p>This will be the summary basically in 2 -3 lines</p>
+                            </div>
+                            <div class="upload-pdf-col">
+                                <img class="cardmenu"  src="menu.png">
+                                <h3>This will be the heading </h3>
+                                <p>This will be the summary basically in 2 -3 lines</p>
+                            </div>
+                            <div class="upload-pdf-col">
+                                <img class="cardmenu"src="menu.png">
+                                <h3>This will be the heading </h3>
+                                <p>This will be the summary basically in 2 -3 lines</p>
+                            </div>
+                           
+                            
+                            
+                                         
+                </div>
+                        
+                    
             </div>
+           
     </div>
     
-
+    <script>
+        var menuBtn=document.getElementById("menuBtn");
+        var sidenav=document.getElementById("sidenav");
+        sidenav.style.visibility="hidden";
+        menuBtn.onclick=function(){
+            //menuBtn.style.backgroundColor="red";
+            if(sidenav.style.visibility=="hidden"){
+                sidenav.style.visibility="visible";
+            }
+            else if(sidenav.style.visibility=="visible"){
+                sidenav.style.visibility="hidden";
+            }
+        }
+    </script>
  
   
 </body>

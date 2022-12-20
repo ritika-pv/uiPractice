@@ -1,85 +1,111 @@
 *{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Trirong", serif;
-  }
-  
-  
-
-  html,body{
-    width: 100%;
-    height: 100%;
-  }
-
-  
-  .sidenav ul {
-    list-style-type: none;
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+  font-family: "Trirong", serif;
+}
+
+
+html,body{
+  width: 100%;
+  height: 100%;
+}
+
+
+#sidenav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  background-color: #cac9c4;
+  /* border: 1px solid #555; */
+  height: 100%; 
+}
+
+#sidenav li a {
+  display: block;
+  color: #000;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+
+/* Change the link color on hover */
+#sidenav li a:hover {
+  background-color: #555;
+  color: white;
+}
+
+#sidenav{
   width: 20%;
-  background-color: #f1f1f1;
-  border: 1px solid #555;
-  height: 100%; /* Full height */
-  position: fixed; /* Make it stick, even on scroll */
-  overflow: auto; /* Enable scrolling if the sidenav has too much content */
-  }
-  
- .sidenav li a {
-    display: block;
-    color: #000;
-    padding: 8px 16px;
-    text-decoration: none;
-    
-  }
-  
-  /* Change the link color on hover */
-  .sidenav li a:hover {
-    background-color: #555;
-    color: white;
-  }
+  height: 100%; 
+  transition-delay: .5 s;
+}
 
 
-  
-
-
-  .flex-container {
+.center{
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-  }
-  /* .row{
-    display:inline-block;
-  } */
-  /* .left{
-flex: 50%;
-  }
-
-  .right{
-    flex: 50%;
-      } */
-      .flex-container-right {
-        display: flex;
-        justify-content: end;
-      }
-      
-.centerHeader {
-   
     align-items: center;
     justify-content: center;
+    height: 100%;
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 8%;
+  background-color: #cac9c4;
+}
+
+.flex-container-right {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
     
+.centerHeader {
+    align-items: center;
+    justify-content: center;
     font-size: 30px;
-  }
+}
+
+.mainBody{
+  padding-top: 2rem;
+  margin: 2rem;
+  width: 80%;
+}
+.mainBody .heading{
+  
+  font-size: 2rem;
+  font-weight: bold;
+  letter-spacing: 0.05rem;
+  /* padding-left: 2rem; */
+ 
+  border-bottom: 0.35rem solid #ffb118;
+}
+
+.container{
+  display:flex;
+  flex-direction: row;
+  justify-content: start;
+  height: 92%;
+}
+.subHeading{
+  padding-top: 2rem;
+    font-size: larger;
+}
+
+.cardmenu{
+  height: 4rem;
+  width: 4rem;
+  background-color: #ffb118;
+  border-radius: 72px
+}
 
 
-  .mainBody .heading{
-    height: 100px;
-    width: 100px;
-    border-color: 5px black solid;
-  }
-
-  .container{
-    display:flex;
-    flex-direction: row;
-    justify-content: start;
-  }
+.upload-pdf-row{
+  margin-top: 3rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 8%;
+}
