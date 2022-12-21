@@ -11,3 +11,19 @@ https://dribbble.com/goods/1350441-Loggie-Logistic-Website-Homepage?token=gAAAAA
 **objective -
 **learning  -
 
+
+
+
+inline	Displays an element as an inline element (like <span>). Any height and width properties will have no effect	
+block	Displays an element as a block element (like <p>). It starts on a new line, and takes up the whole width
+inline-block	Displays an element as an inline-level block container. The element itself is formatted as an inline element, but you can apply height and width values 
+
+
+ Relative Position: Setting the top, right, bottom, and left properties of an element with position: relative; property will cause it to adjust from its normal position. 
+Absolute Position: An element with position: absolute; will cause it to adjust its position with respect to its parent. 
+fixed:--
+we hide the input type in img 
+
+ git add --all   :-adds the changes
+  git commit -m "message"
+  git push
