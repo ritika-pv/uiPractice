@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,45 +12,101 @@
     <link rel="stylesheet" href="uipro.css">
 
 </head>
+
 <body>
     <div class="flex-container">
-            <div class="centerHeader" style="width: 90%;" >
-                <div class="center">
-                    Adfg
-                </div>
+        <img id="menuBtn" src="menu.png">
+        <div class="centerHeader" style="width: 90%;">
+            <div class="center">
+                Adfg
             </div>
-            <div class="flex-container-right" style="width: 10%;">
-                <div>1</div>
-                <div>2</div>
-                <div>3</div>
-            </div>
+        </div>
+        <div class="flex-container-right" style="width: 10%;">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+        </div>
     </div>
 
-    <div class="container" style="background-color: bisque;" >
-            <div class="sidenav">
-                <ul>
-                <li>
-                    <a href="https://dribbble.com/goods/1350441-Loggie-Logistic-Website-Homepage?token=gAAAAABjnKuAHiYfgl5a6Oo799cSwE0dyJbkDtzA6sqWuwHCN9GleZkong3Jw_FyOeA4FJyUqLgm7kXACiRffqCN0fPbel6dhW70ZsUxWjPswyxZn-KiJfBeqaVcjxI2-qXFGwnjsk-2n4SRQwkz2EV2JO_65ptA1rA46vKXRdUrveWxdAXjYkk%3D">Home</a>
+    <div class="container">
+        <div id="sidenav" class="toggleSidenav">
+            <ul>
+                <li class="li">
+                    <a
+                        href="https://dribbble.com/goods/1350441-Loggie-Logistic-Website-Homepage?token=gAAAAABjnKuAHiYfgl5a6Oo799cSwE0dyJbkDtzA6sqWuwHCN9GleZkong3Jw_FyOeA4FJyUqLgm7kXACiRffqCN0fPbel6dhW70ZsUxWjPswyxZn-KiJfBeqaVcjxI2-qXFGwnjsk-2n4SRQwkz2EV2JO_65ptA1rA46vKXRdUrveWxdAXjYkk%3D">Home</a>
                 </li>
-                <li>
+                <li class="li">
                     <a href="news.asp">News</a>
                 </li>
-                <li>
+                <li class="li">
                     <a href="contact.asp">Contact</a>
                 </li>
-                <li>
+                <li class="li">
                     <a href="about.asp">About</a>
                 </li>
             </ul>
-            </div>
-            
-            <div class="mainBody">
-                <div class="heading"> OUR SERVICES </div>
-            </div>
-    </div>
-    
+        </div>
 
- 
-  
+        <div class="mainBody">
+            <div class="heading"> OUR SERVICES </div>
+            <div class="subHeading">Hello ,We are here to help you render
+                your pdf ,save them,<br>make notes highlight text etc </div>
+
+            <div class="upload-pdf-row">
+                <div class="upload-pdf-col">
+                    <div style =  'position: relative;'>
+                        <img class="cardmenu" src="menu.png">
+                        <input type="file" class="input">
+                    </div>
+                    <h3>Upload New</h3>
+                    <p>Upload your document here</p>
+                </div>
+                <div class="upload-pdf-col">
+                    <img class="cardmenu" src="menu.png">
+                    <h3>This will be the heading </h3>
+                    <p>This will be the summary basically in 2 -3 lines</p>
+                </div>
+                <div class="upload-pdf-col">
+                    <img class="cardmenu" src="menu.png">
+                    <h3>This will be the heading </h3>
+                    <p>This will be the summary basically in 2 -3 lines</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var menuBtn = document.getElementById("menuBtn");
+        var sidenav = document.getElementById("sidenav");
+        var sidenavUl = document.querySelectorAll(".li");
+        var mainBody = document.getElementsByClassName("mainBody")[0];
+
+        console.log(":: sidenavUl ::", sidenavUl);
+
+        let state = true;
+        menuBtn.onclick = function () {
+            if(state){
+                sidenav.style.width = '0%';
+                state = false
+                mainBody.style.width = '100%';
+
+                sidenavUl.forEach(data =>{
+                    data.style.display = 'none';
+                })
+
+            }else{
+                sidenav.style.width = '20%';
+                state = true
+                mainBody.style.width = '80%';
+                sidenavUl.forEach(data =>{
+                    data.style.display = 'initial';
+                })
+            }
+           
+        }
+    </script>
+
+
 </body>
+
 </html>
