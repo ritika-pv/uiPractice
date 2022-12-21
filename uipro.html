@@ -14,12 +14,12 @@
 <body>
     <div class="flex-container">
         <img id="menuBtn" src="menu.png">
-            <div class="centerHeader" style="width: 90%;" >
+            <div class="centerHeader"  >
                 <div class="center">
                     Adfg
                 </div>
             </div>
-            <div class="flex-container-right" style="width: 10%;">
+            <div class="flex-container-right" >
                 <div>1</div>
                 <div>2</div>
                 <div>3</div>
@@ -27,19 +27,19 @@
     </div>
 
     <div class="container" >
-            <div id="sidenav">
+            <div id="sidenav" class="toggleSidenav">
                 <ul>
-                <li>
+                <li  class="li">
                     <a href="https://dribbble.com/goods/1350441-Loggie-Logistic-Website-Homepage?token=gAAAAABjnKuAHiYfgl5a6Oo799cSwE0dyJbkDtzA6sqWuwHCN9GleZkong3Jw_FyOeA4FJyUqLgm7kXACiRffqCN0fPbel6dhW70ZsUxWjPswyxZn-KiJfBeqaVcjxI2-qXFGwnjsk-2n4SRQwkz2EV2JO_65ptA1rA46vKXRdUrveWxdAXjYkk%3D">Home</a>
                 </li>
-                <li>
-                    <a href="news.asp">News</a>
+                <li class="li">
+                    <a href="#">News</a>
                 </li>
-                <li>
-                    <a href="contact.asp">Contact</a>
+                <li class="li">
+                    <a href="#">Contact</a>
                 </li>
-                <li>
-                    <a href="about.asp">About</a>
+                <li class="li">
+                    <a href="#">About</a>
                 </li>
             </ul>
             </div>
@@ -52,25 +52,26 @@
                     
                 <div class="upload-pdf-row">
                             <div class="upload-pdf-col">
-                                <img class="cardmenu" src="menu.png">
-                               <h3>This will be the heading `C:\Users\dell\Desktop\uipro\uipro.css</h3>
-                               <p>This will be the summary basically in 2 -3 lines</p>
+                                <div >
+                                    <img class="cardmenu" src="add.png">
+                                    <input type="file" class="input">
+                                </div>
+                               <h3>Upload a new pdf </h3>
+                               <p>Summary of document</p>
                             </div>
                             <div class="upload-pdf-col">
-                                <img class="cardmenu"  src="menu.png">
+                                <img class="cardmenu"  src="file.png">
                                 <h3>This will be the heading </h3>
                                 <p>This will be the summary basically in 2 -3 lines</p>
                             </div>
                             <div class="upload-pdf-col">
-                                <img class="cardmenu"src="menu.png">
+                                <img class="cardmenu"src="file.png">
                                 <h3>This will be the heading </h3>
                                 <p>This will be the summary basically in 2 -3 lines</p>
                             </div>
                            
                             
-                            
-                                         
-                </div>
+                 </div>
                         
                     
             </div>
@@ -78,18 +79,50 @@
     </div>
     
     <script>
-        var menuBtn=document.getElementById("menuBtn");
-        var sidenav=document.getElementById("sidenav");
-        sidenav.style.visibility="hidden";
-        menuBtn.onclick=function(){
-            //menuBtn.style.backgroundColor="red";
-            if(sidenav.style.visibility=="hidden"){
-                sidenav.style.visibility="visible";
+
+        
+    
+        var menuBtn = document.getElementById("menuBtn");
+        var sidenav = document.getElementById("sidenav");
+        var sidenavUl = document.querySelectorAll(".li");
+        var mainBody = document.getElementsByClassName("mainBody")[0];
+
+        //console.log(":: sidenavUl ::", sidenavUl);
+
+        let state = true;
+        menuBtn.onclick = function () {
+            if(state){
+                sidenav.style.width = '0%';
+                state = false
+                mainBody.style.width = '100%';
+
+                sidenavUl.forEach(data =>{
+                    data.style.display = 'none';
+                })
+
+            }else{
+                sidenav.style.width = '20%';
+                state = true
+                mainBody.style.width = '80%';
+                sidenavUl.forEach(data =>{
+                    data.style.display = 'initial';
+                })
             }
-            else if(sidenav.style.visibility=="visible"){
-                sidenav.style.visibility="hidden";
-            }
+           
         }
+    
+
+        
+        //sidenav.style.visibility="hidden";
+        //menuBtn.onclick=function(){
+            //menuBtn.style.backgroundColor="red";
+        //     if(sidenav.style.visibility=="hidden"){
+        //         sidenav.style.visibility="visible";
+        //     }
+        //     else if(sidenav.style.visibility=="visible"){
+        //         sidenav.style.visibility="hidden";
+        //     }
+        
     </script>
  
   
